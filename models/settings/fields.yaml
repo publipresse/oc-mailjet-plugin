@@ -1,0 +1,7 @@
+fields:
+  api_key:
+    label: publipresse.mailjet::lang.settings.api_key
+    span: auto
+  secret_key:
+    label: publipresse.mailjet::lang.settings.secret_key
+    span: auto

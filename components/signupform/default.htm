@@ -1,0 +1,17 @@
+
+<div id="{{ __SELF__.id }}">
+    {% if success %}
+        <div class="alert alert-success">{{ 'Successfully subscribed, see you soon !'|_ }}</div>
+    {% elseif error %}
+        <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    <form data-request="{{ __SELF__ }}::onSignup" data-request-update="'{{ __SELF__ }}::default': '#{{ __SELF__.id }}'">
+        <div class="field textfield">
+            <label for="{{ __SELF__.id }}-email">{{ 'Email address'|_ }}</label>
+            <input id="{{ __SELF__.id }}-email" name="email" type="text" placeholder="Adresse email" />
+        </div>
+        <div class="field submit">
+            <button class="btn" type="submit">{{ 'Subscribe'|_ }}</button>
+        </div>
+    </form>
+</div>
